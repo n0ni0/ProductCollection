@@ -1,0 +1,7 @@
+<?php // Get current product
+
+$viewModel = $block->getViewModel();
+foreach ($viewModel->getFilteredCollection() as $product) {
+    echo $product->getName() . '<img height="100" width="150" src="'. $viewModel->getProductImage($product) . '"/></br>';
+}
+?>
